@@ -11,7 +11,7 @@ LEVELS
 Boss
 - has it only map
 - faster then hero 
- -throws fire ball
+ -throws fire ball <br>
  -|this might change with the child character|
 
 Hero 
