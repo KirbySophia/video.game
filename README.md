@@ -12,7 +12,7 @@ Boss
 - has it only map
 - faster then hero 
  - throws fire ball <br>
- - |this might change with the child character|
+ - this might change with the child character
 
 Hero 
  - avoids obstacle by jumping over or jumping on the obstacle to defeat them.
