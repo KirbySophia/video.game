@@ -1,0 +1,2 @@
+image(getImage("cute/TreeUgly"), 78, 218, 261, 136);
+image(getImage("cute/TreeUgly"), 100, 100);
