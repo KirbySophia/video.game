@@ -26,4 +26,6 @@ mouseClicked = function() {
        });
        btn1.draw();
        
+       draw = function(){
 background(100,100,100,100)
+       };
