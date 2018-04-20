@@ -1,1 +1,29 @@
-
+**//mouse Click function
+mouseClicked = function() {
+  if(mouseX >= 100 && mouseX <=250 &&
+     mouseY >= 100 && mouseY <= 150){
+             
+       var Button = function(config) {
+    this.x = config.x || 0;
+    this.y = config.y || 0;
+    this.width = config.width || 150;
+    this.height = config.height || 50;
+    this.label = config.label || "Click";
+};
+       
+       Button.prototype.draw = function() {
+    fill(0, 234, 255);
+    rect(this.x, this.y, this.width, this.height, 5);
+    fill(0, 0, 0);
+    textSize(19);
+    textAlign(LEFT, TOP);
+    text(this.label, this.x+10, this.y+this.height/4);
+};
+       var btn1 = new button({
+       x:100,
+       y:100,
+       label: "click to start!"
+       });
+       btn1.draw();
+       
+background(100,100,100,100)
