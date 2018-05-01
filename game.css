@@ -40,3 +40,12 @@ background(100,100,100,100)
       text("yuboun",200,200);
       text("click start");
        };
+
+       mouseClicked = function() {
+    if (currentScene1 === 1) {
+      drawScene1();    
+    }
+    else if( currentScene === 2 ){
+     drawScene1();
+    }
+};
