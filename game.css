@@ -29,3 +29,14 @@ mouseClicked = function() {
        draw = function(){
 background(100,100,100,100)
        };
+
+       
+      **//scenes
+       
+    var drawscene1 = function(){
+      currentScene1= 1
+      background(100,100,100,0);
+      textSize(10);
+      text("yuboun",200,200);
+      text("click start");
+       };
