@@ -1,4 +1,7 @@
 # video.game-
+
+https://kirbysophia.github.io/video.game/index1.html
+
 a fantasy fighting game, that has three level with a boss at the end.
 has opening and ending screens, sound effects, backgound music and a short back story.
 |hero and villian|
