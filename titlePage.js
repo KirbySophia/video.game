@@ -1,5 +1,6 @@
 function setup() {
   createCanvas(400, 400);
+	
     background(38, 25, 25);
 textSize(46);
 for(var i =0; i<8; i++){
@@ -9,6 +10,5 @@ for(var i =0; i<8; i++){
 }
 
 function draw() {
-  background(220);
-	ellipse(10,10,10,10);
+ 
 }
