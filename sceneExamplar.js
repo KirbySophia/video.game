@@ -6,8 +6,14 @@ var drawButton = function() {
     fill(255, 255, 255);
     textSize(16);
     text("NEXT", 344, 29);
+}; 
+var titleScene = function() {
+    currentScene = 0;
+    background(108, 146, 171);
+    fill(0, 85, 255);
+    textSize(26);
+    text("The Story of the kid in the maze", 15, height/2);
 };
-
 var drawScene1 = function() {
     currentScene = 1;
     background(108, 146, 171);
@@ -81,7 +87,9 @@ draw = function() {
 };
 
 mouseClicked = function() {
-    if (currentScene === 1) {
+    if (currentScene === 0) {
+        drawScene1();
+    else if (currentScene === 1) {
         drawScene2();
     } else if (currentScene === 2) {
         drawScene3();
