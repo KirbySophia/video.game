@@ -1,5 +1,4 @@
 var currentScene;
-
 var drawButton = function() {
     fill(81, 166, 31);
     rect(340, 10, 50, 25);
@@ -29,7 +28,7 @@ var drawScene2 = function() {
     background(129, 232, 25);
     fill(7, 14, 145);
     textSize(23);
-    text("the kid was walking at the forest!", 10, 100);
+    text("The kid was walking at the forest!", 10, 100);
     image(getImage("avatars/robot_male_2"), width/2, height/2);
    
 };
@@ -39,21 +38,15 @@ var drawScene3 = function() {
     background(4, 7, 8);
     fill(167, 170, 209);
     textSize(39);
-    text("He fell down a pit!", 10, 100);
+    text("The kid fell down a pit!", 10, 100);
     image(getImage("avatars/robot_male_2"), width/2, height/2);
 };
 
 var drawScene4 = function() {
     currentScene = 4;
-    
-    // Based on https://www.khanacademy.org/cs/drums/6586586242744320
-    background(194, 255, 222);
-    
-    
-    
-    // face
+     background(black);
     image(getImage("avatars/robot_male_1"),+177, +101,158, 123);
-    
+    text("the kid can't see anything and gets scared",10,100)
     
 };
 
@@ -62,21 +55,22 @@ var drawScene5 = function() {
     background(189, 212, 217);
     fill(7, 14, 145);
     textSize(39);
-    text("he have to escape befor the dar comes and get eaten!", 10, 47);
+    text("Thd kid have to escape befor the dark comes and get eaten by the monsters!", 10, 47);
+    text("make more keys and find the right key"15,47);
     textSize(17);
-    text("Drag to make more gems", 10, 78);
+    text("Drag to make more keys", 10, 78);
     
     image(getImage("avatars/robot_male_3"), 21, 183);
     fill(71, 71, 71);
     rect(32, 185, 108, 15);
     rect(46, 126, 82, 60);
     
-    image(getImage("cute/GemOrange"), 195, 250);
+    image(getImage("cute/Key"), 195, 250);
 };
 
 mouseDragged = function() {
     if (currentScene === 5) {
-        image(getImage("cute/GemOrange"), mouseX-20, mouseY-20);
+        image(getImage(), mouseX-20, mouseY-20);
     }
     drawButton();
 };
