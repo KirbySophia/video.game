@@ -45,9 +45,9 @@ var drawScene3 = function() {
 
 var drawScene4 = function() {
     currentScene = 4;
-     background(black);
+     background(0,0,0);
     image(getImage("avatars/robot_male_1"),+177, +101,158, 123);
-    text("the kid can't see anything and gets scared",10,100)
+    text("the kid can't see anything and gets scared",10,100);
     
 };
 
@@ -57,7 +57,7 @@ var drawScene5 = function() {
     fill(7, 14, 145);
     textSize(39);
     text("Thd kid have to escape befor the dark comes and get eaten by the monsters!", 10, 47);
-    text("make more keys and find the right key"15,47);
+    text("make more keys and find the right key",15,47);
     textSize(17);
     text("Drag to make more keys", 10, 78);
     
