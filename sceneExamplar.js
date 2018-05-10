@@ -85,7 +85,7 @@ draw = function() {
 mouseClicked = function() {
     if (currentScene === 0) {
         drawScene1();
-    else if (currentScene === 1) {
+    } else if (currentScene === 1) {
         drawScene2();
     } else if (currentScene === 2) {
         drawScene3();
