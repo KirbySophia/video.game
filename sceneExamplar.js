@@ -6,6 +6,7 @@ var drawButton = function() {
     textSize(16);
     text("NEXT", 344, 29);
 }; 
+//title page
 var titleScene = function() {
     currentScene = 0;
       background(38, 25, 25);
