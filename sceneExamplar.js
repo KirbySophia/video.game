@@ -1,4 +1,6 @@
 var currentScene;
+var bg;
+
 var drawButton = function() {
     fill(81, 166, 31);
     rect(340, 10, 50, 25);
@@ -6,7 +8,6 @@ var drawButton = function() {
     textSize(16);
     text("NEXT", 344, 29);
 }; 
-//title page
 var titleScene = function() {
     currentScene = 0;
       background(38, 25, 25);
@@ -25,8 +26,11 @@ var drawScene1 = function() {
 };
 
 var drawScene2 = function() {
+  function setup(){
+    bg = loadImage("6-vector-game-backgrounds-8003_imgs_8003_2.png");
+  createCanvas(720, 400); 
+  }
     currentScene = 2;
-    background(129, 232, 25);
     fill(7, 14, 145);
     textSize(23);
     text("The kid was walking at the forest!", 10, 100);
@@ -45,9 +49,9 @@ var drawScene3 = function() {
 
 var drawScene4 = function() {
     currentScene = 4;
-     background(0,0,0);
+     background(black);
     image(getImage("avatars/robot_male_1"),+177, +101,158, 123);
-    text("the kid can't see anything and gets scared",10,100);
+    text("the kid can't see anything and gets scared",10,100)
     
 };
 
@@ -57,7 +61,7 @@ var drawScene5 = function() {
     fill(7, 14, 145);
     textSize(39);
     text("Thd kid have to escape befor the dark comes and get eaten by the monsters!", 10, 47);
-    text("make more keys and find the right key",15,47);
+    text("make more keys and find the right key"15,47);
     textSize(17);
     text("Drag to make more keys", 10, 78);
     
@@ -100,5 +104,5 @@ mouseClicked = function() {
     drawButton();
 };
 
-titleScene();
+drawScene1();
 drawButton();
