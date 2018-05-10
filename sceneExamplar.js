@@ -100,5 +100,5 @@ mouseClicked = function() {
     drawButton();
 };
 
-drawScene1();
+titleScene();
 drawButton();
