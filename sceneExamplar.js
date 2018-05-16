@@ -23,7 +23,7 @@ var drawScene1 = function() {
     background(108, 146, 171);
     fill(0, 85, 255);
     textSize(26);
-    text("The Story of the kid in the maze", 15, height/2);
+    text("The kid in the maze", 15, height/2);
 };
 
 var drawScene2 = function() {
@@ -52,7 +52,7 @@ var drawScene4 = function() {
     currentScene = 4;
      background(5, 5, 5);
     image(getImage("avatars/robot_male_1"),+177, +101,158, 123);
-    text("the kid can't see anything and gets scared",10,100);
+    text("The kid can't see anything and gets scared",10,100);
     
 };
 
