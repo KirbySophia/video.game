@@ -1,5 +1,5 @@
 draw = function() {
-    //Control Player 1
+    //Control Player 
 if (keyIsPressed ) {
     if (keyCode === UP){ 
         movePlayerUp();
