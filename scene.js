@@ -2,6 +2,9 @@ var currentScene;
 var bg;
 var createCanvas;
 
+function setup(){
+  createCanvas(4000,4000);
+}
 var drawButton = function() {
     fill(81, 166, 31);
     rect(340, 10, 50, 25);
