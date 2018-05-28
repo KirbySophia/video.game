@@ -9,8 +9,9 @@ var drawButton = function() {
     textSize(16);
     text("NEXT", 344, 29);
 }; 
-var titleScene = function() {
-    currentScene = 0;
+// starting scene
+var drawScene1  = function() {
+    currentScene = 1;
       background(38, 25, 25);
     textSize(46);
     for(var i =0; i<8; i++){
@@ -18,20 +19,20 @@ var titleScene = function() {
 
 }
 };
-var drawScene1 = function() {
-    currentScene = 1;
+var drawScene2 = function() {
+    currentScene = 2;
     background(108, 146, 171);
     fill(0, 85, 255);
     textSize(26);
     text("The kid in the maze", 15, height/2);
 };
 
-var drawScene2 = function() {
+var drawScene3 = function() {
  var setup = function() {
     bg = loadImage("6-vector-game-backgrounds-8003_imgs_8003_2.png");
   createCanvas(720, 400); 
   };
-    currentScene = 2;
+    currentScene = 3;
     fill(7, 14, 145);
     textSize(23);
     text("The kid was walking at the forest!", 10, 100);
@@ -39,8 +40,8 @@ var drawScene2 = function() {
    
 };
 
-var drawScene3 = function() {
-    currentScene = 3;
+var drawScene4 = function() {
+    currentScene = 4;
     background(4, 7, 8);
     fill(167, 170, 209);
     textSize(39);
@@ -48,16 +49,16 @@ var drawScene3 = function() {
     image(getImage("avatars/robot_male_2"), width/2, height/2);
 };
 
-var drawScene4 = function() {
-    currentScene = 4;
+var drawScene5 = function() {
+    currentScene = 5;
      background(5, 5, 5);
     image(getImage("avatars/robot_male_1"),+177, +101,158, 123);
     text("The kid can't see anything and gets scared",10,100);
     
 };
 
-var drawScene5 = function() {
-    currentScene = 5;
+var drawScene6 = function() {
+    currentScene = 6;
     background(189, 212, 217);
     fill(7, 14, 145);
     textSize(39);
@@ -71,8 +72,8 @@ var drawScene5 = function() {
     rect(32, 185, 108, 15);
     rect(46, 126, 82, 60);
     
-    image(getImage("cute/Key"), 195, 250);
 };
+
 
 mouseDragged = function() {
     if (currentScene === 5) {
@@ -87,23 +88,34 @@ draw = function() {
     }
     drawButton();
 };
+//gameover scene
+var drawScene8 = function() {
+    currentScene = 8;
+background(220);
+textSize(41);
+for(var i =0; i<2; i++)
 
+{	text("GAME OVER",i+97,36*i+52,319,111);
+}
+
+};
 mouseClicked = function() {
-    if (currentScene === 0) {
-        drawScene1();
-    } else if (currentScene === 1) {
+    if (currentScene === 1) {
         drawScene2();
     } else if (currentScene === 2) {
         drawScene3();
     } else if (currentScene === 3) {
         drawScene4();
-    }  else if (currentScene === 4) {
+    } else if (currentScene === 4) {
         drawScene5();
-    } else if (currentScene === 5) {
-        drawScene1();
+    }  else if (currentScene === 5) {
+        drawScene6();
+    } else if (currentScene === 7) {
+      drawScene8();
     }
     drawButton();
 };
 
 drawScene1();
 drawButton();
+
