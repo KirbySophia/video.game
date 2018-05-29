@@ -1,10 +1,14 @@
-draw = function() {
+var MovePlayerUp;
+var MovePlayerDown;
+
+ draw = function() {
     //Control Player 
 if (keyIsPressed ) {
     if (keyCode === UP){ 
-        movePlayerUp();
+        MovePlayerUp();
 }
 else if (keyCode=== DOWN){
-    movePlayerDown();
+  MovePlayerDown();
 }
 }
+};
