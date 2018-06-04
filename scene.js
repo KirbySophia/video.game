@@ -2,9 +2,9 @@ var currentScene;
 var bg;
 var createCanvas;
 
-function setup(){
+var setup = function(){
   createCanvas(4000,4000);
-}
+};
 var drawButton = function() {
     fill(81, 166, 31);
     rect(340, 10, 50, 25);
@@ -18,7 +18,7 @@ var drawScene1  = function() {
       background(38, 25, 25);
     textSize(46);
     for(var i =0; i<8; i++){
-        text("POLYBIUS",i+97,43*i+22,309,111);
+        text("POLYBIUS",i+84,43*i+28,309,111);
 
 }
 };
@@ -31,10 +31,12 @@ var drawScene2 = function() {
 };
 
 var drawScene3 = function() {
- var setup = function() {
-    bg = loadImage("6-vector-game-backgrounds-8003_imgs_8003_2.png");
-  createCanvas(720, 400); 
-  };
+    background(44, 135, 39);
+    image(getImage("cute/TreeUgly"), 44, 218, 81, 136);
+    image(getImage("cute/TreeUgly"), 100, 100, 261, 136);
+    image(getImage("cute/GrassBlock"), 0, 319, 58, 81);
+    image(getImage("cute/StoneBlockTall"), 100, 100, 40, 80);
+    image(getImage("cute/WaterBlock"), 0, 400, 55, 17);
     currentScene = 3;
     fill(7, 14, 145);
     textSize(23);
@@ -64,16 +66,18 @@ var drawScene6 = function() {
     currentScene = 6;
     background(189, 212, 217);
     fill(7, 14, 145);
-    textSize(39);
-    text("Thd kid have to escape befor the dark comes and get eaten by the monsters!", 10, 47);
-    text("make more keys and find the right key",15,47);
-    textSize(17);
-    text("Drag to make more keys", 10, 78);
+    textSize(27);
+    text("The kid have to escape before ", 10, 58);
+    text("the dark comes and get eaten", 10, 81);
+    text("by the monsters!", 10, 106);
+    textSize(20);
+    text("Make more keys and find the right key",10,143);
+    text("Drag to make more keys", 10, 174);
     
-    image(getImage("avatars/robot_male_3"), 21, 183);
+    image(getImage("avatars/robot_male_3"), 21, 257);
     fill(71, 71, 71);
-    rect(32, 185, 108, 15);
-    rect(46, 126, 82, 60);
+    rect(32, 257, 108, 15);
+    rect(46, 197, 82, 60);
     
 };
 
@@ -98,7 +102,7 @@ background(220);
 textSize(41);
 for(var i =0; i<2; i++)
 
-{	text("GAME OVER",i+97,36*i+52,319,111);
+{  text("GAME OVER",i+97,36*i+52,319,111);
 }
 
 };
@@ -121,4 +125,3 @@ mouseClicked = function() {
 
 drawScene1();
 drawButton();
-
