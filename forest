@@ -1,5 +1,12 @@
-image(getImage("cute/TreeUgly"), 78, 218, 261, 136);
-image(getImage("cute/TreeUgly"), 100, 100);
-image(getImage("cute/GrassBlock")
-image(getImage("cute/StoneBlockTall"), 100, 100, 40, 80);
-image(getImage("cute/WaterBlock")
+background(44, 135, 39);
+
+var grass = getImage("cute/GrassBlock");
+var tree = getImage("cute/TreeUgly");
+
+// Draw the tree and grass once
+var landscape = 0;
+while(landscape<400){
+    image(grass, landscape, 227);
+    image(tree, landscape, 168);
+    landscape+=99;
+}
