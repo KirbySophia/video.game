@@ -1,26 +1,37 @@
 function setup() {
   createCanvas(400, 400);
-var lilly=  rect(10,10,10,10);
 };
 var lilly= { 
-y:10,
-x:10
+  y:
+10, 
+  x:
+10
+  }
+
+var showCharacter = function() {
+  rect(lilly.x, lilly.y, 10, 10);
 }
 
-  var moveCharacter = function() {
-    //Control Player 
-    if (keyIsPressed) {
-      if (keyCode === 38) { 
-        lilly.y--;
-        //lilly.Up();
-      } else if (keyCode === 40) {
-        lilly.y++;
-      
-      }
+var moveCharacter = function() {
+  //Control Player 
+ // if (keyIsPressed) {
+    if (keyIsPressed &&keyCode === 38) { 
+      lilly.y--;
+      //lilly.Up();
+    } else if (keyIsPressed && keyCode === 40) {
+      lilly.y++;
+    } else if (keyIsPressed && keyCode=== 39) {
+      lilly.x--;
+    } else if (keyIsPressed && keyCode === 37) {
+      lilly.x++;
     }
-  };
-  var background1 = function() {
-    //map
+    else {
+     keyCode = 0;}
+  //}
+};
+var background1 = function() {
+  background(179, 234, 245);
+  //map
   fill(255, 251, 3);
   rect (94, 10, 42, 14);
   fill(3, 3, 0);
@@ -67,9 +78,12 @@ x:10
   line(126, 163, 126, 133);
   line(107, 180, 107, 132);
 };
-  
+
 function draw() {
-   moveCharacter();
-      rect(lilly.x,lilly.y,10,10);
- background1(); 
+  background1();
+  if (keyIsPressed) { 
+    moveCharacter();
+  }
+  showCharacter();
 } 
+
