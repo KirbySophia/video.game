@@ -21,9 +21,9 @@ var moveCharacter = function() {
     } else if (keyIsPressed && keyCode === 40) {
       lilly.y++;
     } else if (keyIsPressed && keyCode=== 39) {
-      lilly.x--;
-    } else if (keyIsPressed && keyCode === 37) {
       lilly.x++;
+    } else if (keyIsPressed && keyCode === 37) {
+      lilly.x--;
     }
     else {
      keyCode = 0;}
@@ -39,15 +39,15 @@ var background1 = function() {
   fill(3, 3, 0);
   text("start", 103, 21);
   fill(255, 251, 3);
-  rect (315, 376, 42, 14);
+  rect (43, 376, 42, 14);
   fill(3, 3, 0);
-  text("end", 327, 387);
+  text("end", 48, 387);
   //square
   line(89, 10, 393, 10);
   line(10, 10, 46, 10);
   line(10, 10, 10, 386);
-  line(11, 390, 356, 391);
-  line(393, 386, 395, 11);
+  line(43, 390, 395, 391);
+  line(395, 389, 395, 11);
   
   //horizental lines layer 1
   line(45,45,77,45);
@@ -109,12 +109,14 @@ var background1 = function() {
     line(268,333,332,333);
 
   //horizental lines layer 12
-    line(42,355,229,355);
+    line(42,355,157,355);
+    line(191,355,228,355);
     line(312,355,358,355);
     
   //vertical lines layer 1
   line(42,106,42,164);
   line(42,197,42,307);
+  line(42,356,42,386);
   
   //vertical lines layer 2
   line(77,46,77,104);
@@ -174,8 +176,6 @@ var background1 = function() {
   line(358,228,358,352);
   
   //end of maze
-
-  
 };
 
 function draw() {
