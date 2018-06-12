@@ -23,14 +23,19 @@ var drawScene1  = function() {
 }
 };
 var drawScene2 = function() {
-    currentScene = 2;
-    background(108, 146, 171);
-    fill(0, 85, 255);
-    textSize(26);
-    text("The kid in the maze", 15, height/2);
+  currentScene = 2;
+    for (var j = -3; j < 13; j++) {
+    for (var i = 0; i < 22; i++) {
+    image(getImage("cute/StoneBlock"), i*35, j*29, 48, 67);
+    }
+}
+
+   fill(72, 109, 181);
+   textSize(35);
+   text("The kid in the maze", 47, height/2);
+   image(getImage("avatars/robot_male_2"), 216, 266);
 };
 
-var drawScene3 = function() {
 var drawScene3 = function() {
     background(144, 240, 234);
 // Draw the sun
