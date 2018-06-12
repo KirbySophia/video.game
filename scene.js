@@ -31,16 +31,33 @@ var drawScene2 = function() {
 };
 
 var drawScene3 = function() {
-    background(44, 135, 39);
-    var grass = getImage("cute/GrassBlock");
-    var tree = getImage("cute/TreeUgly");
-  // Draw the tree and grass once
-    var landscape = 0;
-    while(landscape<400){
-    image(grass, landscape, 227);
-    image(tree, landscape, 168);
-    landscape+=99;
-}
+var drawScene3 = function() {
+    background(144, 240, 234);
+// Draw the sun
+noStroke();
+fill(255, 140, 0);
+ellipse(335, 66, 70, 70);
+
+// Get images from library and remember in variables
+var grass = getImage("cute/GrassBlock");
+var tree = getImage("cute/TreeUgly");
+
+// Draw the tree and grass once
+var landscape = 0;
+while(landscape<400){
+    image(grass, landscape, 270);
+    image(tree, landscape, 200);
+    landscape+=101;
+
+};
+
+    currentScene = 3;
+    fill(7, 14, 145);
+    textSize(23);
+    text("The kid was walking in the forest!", 10, 135);
+    image(getImage("avatars/robot_male_2"), width/2, height/1.5);
+   
+};
 
     currentScene = 3;
     fill(7, 14, 145);
