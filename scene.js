@@ -32,11 +32,16 @@ var drawScene2 = function() {
 
 var drawScene3 = function() {
     background(44, 135, 39);
-    image(getImage("cute/TreeUgly"), 44, 218, 81, 136);
-    image(getImage("cute/TreeUgly"), 100, 100, 261, 136);
-    image(getImage("cute/GrassBlock"), 0, 319, 58, 81);
-    image(getImage("cute/StoneBlockTall"), 100, 100, 40, 80);
-    image(getImage("cute/WaterBlock"), 0, 400, 55, 17);
+    var grass = getImage("cute/GrassBlock");
+    var tree = getImage("cute/TreeUgly");
+  // Draw the tree and grass once
+    var landscape = 0;
+    while(landscape<400){
+    image(grass, landscape, 227);
+    image(tree, landscape, 168);
+    landscape+=99;
+}
+
     currentScene = 3;
     fill(7, 14, 145);
     textSize(23);
