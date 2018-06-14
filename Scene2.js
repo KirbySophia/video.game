@@ -33,7 +33,11 @@ var drawScene2 = function() {
     fill(32, 84, 82);
     text("Goal: Escape Each Maze!", 24, 114, 373, 190);
     fill(128, 78, 128);
-    text("Controls", 145, 171, 400, 400);
+    text("Controls:", 145, 155, 400, 400);
+    fill(54, 94, 5);
+    textSize(16);
+    text("If you want to stop the character from moving, then", 18, 198);
+    text("simultaneously press any two of the arrow keys", 27, 218);
     fill(13, 3, 3);
     stroke(255, 255, 255);
     rect(179, 226, 50, 50); 
@@ -55,7 +59,10 @@ var drawScene2 = function() {
     fill(99, 56, 56);
     textSize(20);
     text("Move Up", 242, 237, 161, 118);
-    text("Move Down", 183, 336, 161, 118);
+    text("Move", 180, 336, 161, 118);
+    text("Down", 180, 358, 161, 118);
+    text("Move Right", 286, 297, 400, 400);
+    text("Move Left", 33, 297, 400, 400);
   
 };
 
