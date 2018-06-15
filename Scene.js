@@ -5,18 +5,26 @@ function setup() {
   createCanvas(500, 400);
   drawScene1();
 };
+var start = 
+ { y:23,
+   x:103
+ }
+
 
 var lilly= { 
   y:
-10, 
+start.x, 
   x:
-10
+start.y
   };
-
+  
+ 
 function draw () {
-  showCharacter();
+   //startLilly();
   moveCharacter();
+    showCharacter();
 
+ 
 };
 var showCharacter = function() {
   rect(lilly.x, lilly.y, 10, 10);
@@ -40,16 +48,35 @@ var moveCharacter = function() {
   //
 };
 
+function startLilly (){
+if (currentScene === 1){
+  lilly.x = start.x;
+  lilly.y = start.y; 
+} else if (current === 2) {
+    lilly.x = 50;
+  lilly.y = 50;
+  } else if (current === 3) {
+     lilly.x = 20;
+  lilly.y = 20;
+  }
+};
+
+
+
 function mouseClicked() {
   if (currentScene === 1) {
-    drawMap1();
+    drawMap1(); 
   } else if (currentScene === 2) {
    drawMap2();
+    startLilly();
   } else if (currentScene === 3) {
     drawMap3();
+     startLilly();
   } else if (currentScene === 4) {
     drawScene8();
- }
+     startLilly();
+  } else if (currentScene === 8) {
+   }
 };
 
 // starting scene
@@ -63,12 +90,14 @@ var drawScene1  = function() {
 };
 
 var drawMap1 = function() {
+       startLilly();
   currentScene = 2;
   background(179, 234, 245);
   // conrtol bar
   fill(255, 217, 0);
   rect(400, 10, 80, 300);
   fill(0, 0, 0);
+  textSize(13);
   text("MOVE UP", 405, 22);
   text("up arrow", 405, 32);
   text("MOVE DOWN", 405, 62);
@@ -83,10 +112,12 @@ var drawMap1 = function() {
   fill(255, 251, 3);
   rect (94, 10, 42, 14);
   fill(3, 3, 0);
-  text("start", 103, 21);
+   textSize(13);
+  text("start", start.x,start.y);
   fill(255, 251, 3);
   rect (349, 341, 42, 14);
   fill(3, 3, 0);
+  textSize(13);
   text("end", 362, 352);
   //square
   line(90, 10, 393, 10);
@@ -333,6 +364,25 @@ var drawMap3 = function() {
   triangle(100, 100, 300, 100, 200, 227);
   ellipse(308, 202, 75, 69);
   ellipse(119, 202, 51, 53);
+  
+  //wall blocking function
+  var spr1;
+var spr2;
+function setup() {
+  createCanvas(400, 400);
+  spr1 = createSprite(
+    width/2, height/2, 100, 100);
+  spr1.shapeColor = color(0);
+  spr2 = createSprite(0, 0, 50, 50);
+  spr2.shapeColor = color(128);
+}
+function draw() {
+  background(50);
+  spr2.velocity.x = (mouseX-spr2.position.x)*0.2;
+  spr2.velocity.y = (mouseY-spr2.position.y)*0.2;
+  spr2.collide(spr1);
+  drawSprites();
+}
 };
 
 var drawScene8 = function() {
