@@ -28,8 +28,15 @@ var moveCharacter = function() {
   } else {
     keyCode = 0;
   }
-  //
 };
+
+function draw() {
+  background1();
+  if (keyIsPressed) { 
+    moveCharacter();
+  }
+  showCharacter();
+} 
 
 // starting scene
 var drawScene1  = function() {
@@ -312,7 +319,7 @@ var drawMap1 = function() {
       ellipse(308, 202, 75, 69);
       ellipse(119, 202, 51, 53);
     };
-      var drawScene8 = function() {
+      var drawScene2 = function() {
         currentScene = 8;
         background(220);
         textSize(41);
@@ -324,6 +331,7 @@ var drawMap1 = function() {
       };
       
       function mouseClicked() {
+        
         if (currentScene === 1) {
           drawMap1();
         } else if (currentScene === 2) {
@@ -331,7 +339,7 @@ var drawMap1 = function() {
         } else if (currentScene === 3) {
           drawMap3();
         } else if (currentScene === 4) {
-          drawScene8();
+          drawScene2();
         }
          };
 
