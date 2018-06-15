@@ -302,17 +302,17 @@ var drawMap1 = function() {
         }
       };
       
-      function mouseClicked() {
-        if (currentScene === 1) {
-          drawMap1();
-        } else if (currentScene === 2) {
-          drawMap2();
-        } else if (currentScene === 3) {
-          drawMap3();
-        } else if (currentScene === 4) {
-          drawScene2();
-        }
-         };
+     function mouseClicked() {
+  if (currentScene === 1) {
+  } else if (currentScene === 2) {
+   drawMap2();
+  }
+  } else if (currentScene === 3) {
+    drawMap3();
+  } else if (currentScene === 4) {
+   drawScene8();
+  }
+};
     
     function draw() {
   background1();
