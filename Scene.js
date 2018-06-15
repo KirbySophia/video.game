@@ -36,7 +36,7 @@ function draw() {
     moveCharacter();
   }
   showCharacter();
-} 
+}
 
 // starting scene
 var drawScene1  = function() {
@@ -331,7 +331,6 @@ var drawMap1 = function() {
       };
       
       function mouseClicked() {
-        
         if (currentScene === 1) {
           drawMap1();
         } else if (currentScene === 2) {
