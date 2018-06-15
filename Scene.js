@@ -341,4 +341,12 @@ var drawMap1 = function() {
           drawScene2();
         }
          };
+    
+    function draw() {
+  background1();
+  if (keyIsPressed) { 
+    moveCharacter();
+  }
+  showCharacter();
+}
 
