@@ -6,16 +6,14 @@ function setup() {
   drawScene1();
 };
 var start = 
- { y:123,
-   x:103
+ { x:-10,
+   y:-10
  }
 
 
 var lilly= { 
-  y:
-start.x, 
-  x:
-start.y
+  x: start.x, 
+  y: start.y
   };
   
  
@@ -24,6 +22,7 @@ function draw () {
   showCharacter();
   moveCharacter();
 };
+
 var showCharacter = function() {
   rect(lilly.x, lilly.y, 10, 10);
 };
@@ -31,7 +30,7 @@ var showCharacter = function() {
 var moveCharacter = function() {
   //Control Player 
   // if (keyIsPressed) {
-  if (keyIsPressed &&keyCode === 38) { 
+  if (keyIsPressed && keyCode === 38) { 
     lilly.y--;
     //lilly.Up();
   } else if (keyIsPressed && keyCode === 40) {
@@ -48,14 +47,18 @@ var moveCharacter = function() {
 
 function startLilly (){
 if (currentScene === 1){
-  lilly.x = start.x;
-  lilly.y = start.y; 
-} else if (current === 2) {
-    lilly.x = 50;
-    lilly.y = 50;
-  } else if (current === 3) {
-    lilly.x = 20;
-    lilly.y = 20;
+    lilly.x = start.x;
+    lilly.y = start.y; 
+} else if (currentScene === 2) {
+    lilly.x = 60;
+    lilly.y = 15;
+  } else if (currentScene === 3) {
+    lilly.x = 60;
+    lilly.y = 10;
+  } else if (currentScene === 4) {
+    lilly.x = 40;
+    lilly.y = 30
+    ;
   }
 };
 
@@ -82,14 +85,15 @@ var drawScene1  = function() {
   currentScene = 1;
   background(38, 25, 25);
   textSize(46);
+  fill(255, 255, 255);
   for (var i =0; i<8; i++) {
     text("POLYBIUS", i+84, 43*i+28, 309, 111);
   }
 };
 
 var drawMap1 = function() {
-       startLilly();
   currentScene = 2;
+  startLilly();
   background(179, 234, 245);
   // conrtol bar
   fill(255, 217, 0);
@@ -111,7 +115,7 @@ var drawMap1 = function() {
   rect (94, 10, 42, 14);
   fill(3, 3, 0);
    textSize(13);
-  text("start", start.x,start.y);
+  text("start", 103, 23);
   fill(255, 251, 3);
   rect (349, 341, 42, 14);
   fill(3, 3, 0);
@@ -340,8 +344,8 @@ var drawMap2 = function() {
 
 
 var drawMap3 = function() {
-  currentScene = 3;
-
+  currentScene = 4;
+  startLilly();
   background(158, 120, 120);
   strokeWeight(23);
   text("Start", 29, 43, 81, 215);
