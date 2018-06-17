@@ -24,15 +24,23 @@ function draw () {
 };
 
 var showCharacter = function() {
+  if (currentScene === 1) {
+    drawScene1();
+  } else if (currentScene === 2) {
+    drawMap1();
+  } else if (currentScene === 3) {
+    drawMap2();
+  } else if (currentScene === 4) {
+    drawMap3();
+  }
   rect(lilly.x, lilly.y, 10, 10);
 };
 
 var moveCharacter = function() {
   //Control Player 
-  // if (keyIsPressed) {
+  
   if (keyIsPressed && keyCode === 38) { 
     lilly.y--;
-    //lilly.Up();
   } else if (keyIsPressed && keyCode === 40) {
     lilly.y++;
   } else if (keyIsPressed && keyCode=== 37) {
@@ -66,7 +74,8 @@ if (currentScene === 1){
 
 function mouseClicked() {
   if (currentScene === 1) {
-    drawMap1(); 
+    drawMap1();
+     startLilly();
   } else if (currentScene === 2) {
    drawMap2();
     startLilly();
@@ -93,7 +102,6 @@ var drawScene1  = function() {
 
 var drawMap1 = function() {
   currentScene = 2;
-  startLilly();
   background(179, 234, 245);
   // conrtol bar
   fill(255, 217, 0);
@@ -345,7 +353,6 @@ var drawMap2 = function() {
 
 var drawMap3 = function() {
   currentScene = 4;
-  startLilly();
   background(158, 120, 120);
   strokeWeight(23);
   text("Start", 29, 43, 81, 215);
