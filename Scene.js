@@ -6,7 +6,7 @@ function setup() {
   drawScene1();
 };
 var start = 
- { y:23,
+ { y:123,
    x:103
  }
 
@@ -21,10 +21,8 @@ start.y
  
 function draw () {
    //startLilly();
+  showCharacter();
   moveCharacter();
-    showCharacter();
-
- 
 };
 var showCharacter = function() {
   rect(lilly.x, lilly.y, 10, 10);
@@ -54,10 +52,10 @@ if (currentScene === 1){
   lilly.y = start.y; 
 } else if (current === 2) {
     lilly.x = 50;
-  lilly.y = 50;
+    lilly.y = 50;
   } else if (current === 3) {
-     lilly.x = 20;
-  lilly.y = 20;
+    lilly.x = 20;
+    lilly.y = 20;
   }
 };
 
@@ -357,17 +355,15 @@ var drawMap3 = function() {
   rect(70, 270, 261, 80);
   line(69, 65, 21, 65);//1
   line(67, 220, 71, 65);//2
-  image(getImage("cute/WaterBlock"), 69, 52, -46, 59);
   line(124, 68, 397, 67);//3
-  image(getImage("cute/WaterBlock"), 384, 6, -75, 58);
   fill(36, 36, 31);
   triangle(100, 100, 300, 100, 200, 227);
   ellipse(308, 202, 75, 69);
   ellipse(119, 202, 51, 53);
-};
- 
+};  
   
- var drawScene8 = function() {
+
+var drawScene8 = function() {
   currentScene = 8;
   background(220);
   textSize(41);
