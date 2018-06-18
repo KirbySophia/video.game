@@ -389,7 +389,20 @@ ellipse(306, 359, 91, 13);
 
 var drawScene6 = function() {
   currentScene = 6;
-  background(50, 59, 59);
+  background(0, 0, 0);
+  fill(232, 227, 153);
+ellipse(196, 275, 27, 30);
+fill(0, 0, 0);
+ellipse(191, 273, 3, 3);
+ellipse(202, 273, 3, 3);
+ellipse(197, 282, 6, 6);
+fill(255, 0, 0);
+ellipse(197, 310, 26, 40);
+rect(210, 279, 11, 30);
+rect(173, 279, 11, 30);
+fill(58, 85, 128);
+rect(188, 327, 6, 30);
+rect(200, 327, 6, 30);
   textSize(20);
   text("The kid can't see anything and gets scared", 10, 100);
 };
