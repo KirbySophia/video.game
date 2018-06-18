@@ -339,10 +339,52 @@ rect(313, 327, 6, 30);
 
 var drawScene5 = function() {
   currentScene = 5;
-  background(0, 0, 0);
+  background(144, 240, 234);
+  // Draw the sun
+  fill(255, 140, 0);
+  ellipse(335, 75, 70, 70);
+  fill(15, 153, 33);
+rect(0, 358, 400, 400);
+
+
+fill(8, 84, 24);
+triangle(4, 316, 76, 316, 36, 263);
+triangle(4, 277, 76, 277, 34, 228);
+triangle(8, 240, 68, 240, 34, 202);
+
+triangle(92, 316, 147, 316, 116, 263);
+triangle(92, 277, 147, 277, 116, 228);
+triangle(92, 240, 147, 240, 116, 202);
+
+triangle(134, 316, 200, 316, 168, 263);
+triangle(134, 277, 200, 277, 168, 228);
+triangle(134, 240, 200, 240, 168, 202);
+
+triangle(208, 316, 282, 316, 240, 263);
+triangle(208, 277, 282, 277, 240, 228);
+triangle(208, 240, 282, 240, 240, 202);
+
+triangle(4, 316, 76, 316, 36, 263);
+triangle(4, 277, 76, 277, 34, 228);
+triangle(8, 240, 68, 240, 34, 202);
+
+triangle(329, 316, 397, 316, 361, 263);
+triangle(329, 277, 397, 277, 361, 228);
+triangle(329, 240, 397, 240, 361, 202);
+
+
+fill(48, 6, 6);
+rect(29, 316, 16, 42);
+rect(111, 316, 16, 42);
+rect(158, 316, 16, 42);
+rect(234, 316, 16, 42);
+rect(354, 316, 16, 42);
+
+fill(0, 0, 0);
+ellipse(306, 359, 91, 13);
   fill(167, 170, 209);
   textSize(39);
-  text("The kid fell down a pit!", 10, 100);
+  text("The kid fell down a pit!", 10, 150);
 };
 
 var drawScene6 = function() {
