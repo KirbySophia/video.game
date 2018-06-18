@@ -2,7 +2,7 @@ var currentScene;
 var bg;
 var createCanvas;
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(400, 400);
   drawScene1();
 };
 var start = 
@@ -27,12 +27,26 @@ var showCharacter = function() {
   if (currentScene === 1) {
     drawScene1();
   } else if (currentScene === 2) {
-    drawMap1();
+    drawScene2();
   } else if (currentScene === 3) {
-    drawMap2();
+    drawScene3();
   } else if (currentScene === 4) {
+    drawScene4();
+  } else if (currentScene === 5) {
+    drawScene5();
+  } else if (currentScene === 6) {
+    drawScene6();
+  } else if (currentScene === 7) {
+    drawScene7();
+  } else if (currentScene === 8) {
+    drawMap1();
+  } else if (currentScene === 9) {
+    drawMap2();
+  } else if (currentScene === 10) {
     drawMap3();
-  }
+  } else if (currentScene === 11) {
+    drawScene8();
+  } 
   rect(lilly.x, lilly.y, 10, 10);
 };
 
@@ -57,36 +71,73 @@ function startLilly (){
 if (currentScene === 1){
     lilly.x = start.x;
     lilly.y = start.y; 
-} else if (currentScene === 2) {
+  } else if (currentScene === 2) {
+     lilly.x = -10;
+     lilly.y = -10;
+  } else if (currentScene === 3) {
+     lilly.x = -10;
+     lilly.y = -10;
+  } else if (currentScene === 4) {
+     lilly.x = -10;
+     lilly.y = -10;
+  } else if (currentScene === 5) {
+     lilly.x = -10;
+     lilly.y = -10;
+  } else if (currentScene === 6) {
+     lilly.x = -10;
+     lilly.y = -10;
+  } else if (currentScene === 7) {
+     lilly.x = -10;
+     lilly.y = -10;
+  } else if (currentScene === 8) {
     lilly.x = 60;
     lilly.y = 15;
-  } else if (currentScene === 3) {
+  } else if (currentScene === 9) {
     lilly.x = 60;
     lilly.y = 10;
-  } else if (currentScene === 4) {
+  } else if (currentScene === 10) {
     lilly.x = 40;
-    lilly.y = 30
-    ;
-  }
+    lilly.y = 30;
+  } else if (currentScene === 11) {
+     lilly.x = -10;
+     lilly.y = -10;
+  } 
 };
 
 
 
 function mouseClicked() {
   if (currentScene === 1) {
-    drawMap1();
+    drawScene2();
      startLilly();
   } else if (currentScene === 2) {
-   drawMap2();
+   drawScene3();
     startLilly();
   } else if (currentScene === 3) {
-    drawMap3();
+    drawScene4();
      startLilly();
   } else if (currentScene === 4) {
-    drawScene8();
+    drawScene5();
+     startLilly();
+  } else if (currentScene === 5) {
+    drawScene6();
+     startLilly();
+  } else if (currentScene === 6) {
+    drawScene7();
+     startLilly();
+  } else if (currentScene === 7) {
+    drawMap1();
      startLilly();
   } else if (currentScene === 8) {
-   }
+    drawMap2();
+     startLilly();
+  } else if (currentScene === 9) {
+    drawMap3();
+     startLilly();
+  } else if (currentScene === 10) {
+    drawScene8();
+     startLilly();
+  } 
 };
 
 // starting scene
@@ -100,8 +151,112 @@ var drawScene1  = function() {
   }
 };
 
+var drawScene2 = function() {
+   currentScene = 2;
+   background(201, 123, 22);
+    textSize(77);
+    text("Instructions", 3, 27, 425, 96);
+    textSize(30);
+    fill(32, 84, 82);
+    text("Goal: Escape Each Maze!", 24, 114, 373, 190);
+    fill(128, 78, 128);
+    text("Controls:", 145, 170, 400, 400);
+    fill(54, 94, 5);
+    textSize(16);
+    fill(255, 255, 255);
+    rect(179, 226, 50, 50); 
+    fill(255, 255, 255);
+    line(205,267,204,237);
+    line(191,254,203,237);
+    line(219,254,203,237);
+    fill(255, 255, 255);
+    rect(179, 276, 50, 50); 
+    fill(255, 255, 255);
+    line(205,314,204,286);
+    line(204,313,217,300);
+    line(204,313,192,300);
+    fill(255, 255, 255);
+    rect(129, 276, 50, 50); 
+    fill(255, 255, 255);
+    line(141,303,168,303);
+    line(142,304,158,316);
+    line(142,303,158,293);
+    fill(255, 255, 255);
+    rect(229, 276, 50, 50); 
+    fill(255, 255, 255);
+    line(267,303,238,303);
+    line(268,304,250,293);
+    line(266,304,253,318);
+    fill(99, 56, 56);
+    textSize(20);
+    text("Move Up", 242, 237, 161, 118);
+    text("Move", 180, 336, 161, 118);
+    text("Down", 180, 358, 161, 118);
+    text("Move Right", 286, 297, 400, 400);
+    text("Move Left", 33, 297, 400, 400);
+  
+};
+
+var drawScene3 = function() {
+  background(20,70,100);
+  currentScene = 3;
+  for (var j = -3; j < 13; j++) {
+    for (var i = 0; i < 22; i++) {
+     fill(207, 195, 162);
+     rect(i*63, j*34, 70, 132);
+    }
+  }
+
+  fill(255, 255, 255);
+  textSize(35);
+  text("The kid at home", 47, height/2);
+};
+
+var drawScene4 = function() {
+  background(144, 240, 234);
+  // Draw the sun
+  fill(255, 140, 0);
+  ellipse(335, 75, 70, 70);
+
+
+  currentScene = 4;
+  fill(7, 14, 145);
+  textSize(23);
+  text("The kid was walking in the forest!", 10, 135);
+};
+
+var drawScene5 = function() {
+  currentScene = 5;
+  background(0, 0, 0);
+  fill(167, 170, 209);
+  textSize(39);
+  text("The kid fell down a pit!", 10, 100);
+};
+
+var drawScene6 = function() {
+  currentScene = 6;
+  background(50, 59, 59);
+  textSize(20);
+  text("The kid can't see anything and gets scared", 10, 100);
+};
+
+var drawScene7 = function() {
+  currentScene = 7;
+  background(189, 212, 217);
+  fill(7, 14, 145);
+  textSize(27);
+  text("The kid have to escape so", 10, 58);
+  text("he doesn't get eaten", 10, 81);
+  text("by the monsters!", 10, 110);
+  textSize(20);
+
+  fill(71, 71, 71);
+  rect(32, 257, 108, 15);
+  rect(46, 197, 82, 60);
+};
+
 var drawMap1 = function() {
-  currentScene = 2;
+  currentScene = 8;
   background(179, 234, 245);
   // conrtol bar
   fill(255, 217, 0);
@@ -201,7 +356,7 @@ var drawMap1 = function() {
 };
 
 var drawMap2 = function() {
-  currentScene =3;
+  currentScene = 9;
   background(222, 104, 104);
   strokeWeight(3);
 
@@ -352,7 +507,7 @@ var drawMap2 = function() {
 
 
 var drawMap3 = function() {
-  currentScene = 4;
+  currentScene = 10;
   background(158, 120, 120);
   strokeWeight(23);
   text("Start", 29, 43, 81, 215);
@@ -375,7 +530,7 @@ var drawMap3 = function() {
   
 
 var drawScene8 = function() {
-  currentScene = 8;
+  currentScene = 11;
   background(220);
   textSize(41);
   for (var i =0; i<2; i++) {  
