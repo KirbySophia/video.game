@@ -409,17 +409,33 @@ rect(200, 327, 6, 30);
 
 var drawScene7 = function() {
   currentScene = 7;
-  background(189, 212, 217);
-  fill(7, 14, 145);
-  textSize(27);
-  text("The kid have to escape so", 10, 58);
-  text("he doesn't get eaten", 10, 81);
-  text("by the monsters!", 10, 110);
-  textSize(20);
+   background(0,0, 0);
+  // draw monster body
+fill(252, 0, 210);
+triangle(158,163,59,145,118,219);
+triangle(152,159,200,82,250,159);
+triangle(344,158,251,160,292,234);
+triangle(152,293,65,298,116,217);
+triangle(350,307,248,295,290,225);
+triangle(203,387,143,297,261,292);
 
-  fill(71, 71, 71);
-  rect(32, 257, 108, 15);
-  rect(46, 197, 82, 60);
+//draw monster facial features 
+ellipse(200, 235, 177, 183);
+fill(255, 255, 255);
+ellipse(165, 221, 30, 30);
+ellipse(234, 219, 30, 30);
+fill(0, 0, 0);
+ellipse(235, 216, 15, 15);
+ellipse(163, 223, 15, 15);
+line(137, 190, 172, 197);
+line(221, 196, 259, 182);
+ellipse(202, 269, 50, 41);
+  fill(7, 140, 145);
+  textSize(27);
+  text("The kid has to escape so", 10, 58);
+  text("he doesn't get eaten", 10, 81);
+  text("by the monster!", 10, 110);
+  textSize(20);
 };
 
 var drawMap1 = function() {
