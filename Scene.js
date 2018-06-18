@@ -100,8 +100,8 @@ if (currentScene === 1){
     lilly.x = 40;
     lilly.y = 30;
   } else if (currentScene === 11) {
-     lilly.x = -10;
-     lilly.y = -10;
+     lilly.x = -20;
+     lilly.y = -20;
   } 
 };
 
