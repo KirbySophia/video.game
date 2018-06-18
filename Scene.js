@@ -756,7 +756,8 @@ var drawScene8 = function() {
   currentScene = 11;
   background(220);
   textSize(41);
-  for (var i =0; i<2; i++) {  
-    text("GAME OVER", i+97, 36*i+52, 319, 111);
+  fill(255, 255, 255);
+  for (var i =0; i<8; i++) {  
+    text("GAME OVER", i+68, 36*i+56, 337, 344);
   }
 };
