@@ -2,14 +2,7 @@ var currentScene;
 var bg;
 var createCanvas;
 
-var song2;
-
-function preload() {
-  song1 = loadSound('assests/song.mp3');
-}  
-
 function setup() {
-  song1.play();
   createCanvas(400, 400);
   drawScene1();
 };
