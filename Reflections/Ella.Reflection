@@ -1,3 +1,10 @@
-how we made it
-what we learned
-what we learned from presenting
+Game Reflection
+
+How we made it:
+We made the game using many different programms such as javascript, p5.js and Khan Academy. Before we started making the game, we were using Khan Academy to learn how to use JavaSript, HTML and CSS. This allowed us to have the skills to make our game. Also, before starting the game we did many steps to plan how it was going to work such as the scene planner and making flowcharts. While programming the actual game we started by programming mutlitple scences at the start so that there could be a backstory to our game. Then, we added our 3 mazes. The character thats moves is able to do so using the keyIsPressed function. 
+
+What we learned:
+After making this game I learned a lot. Firstly, I learned how to implement the code that I was learning to make something since on Khan Academy you have the help of the videos and the guidelines, but for this game we were all on our own. Secondly, I learned the process you need to go through before making a game such as using a flowchart and scene planners to know what your goal for the game is. Thirdly, I learned that making th game is very time consumming and I now have this appreciation for complex games such as minecraft and others. Lastly, I learned how to use some new commands on JavaScipt which were used in the game such a the moveCharacter and showCharacter. 
+
+What we learned from presenting:
+From presenting, there were many things I learned. First off, I learned how to communicate with our audience/buyers of the game. I now know that when dealing with specific age groups of audiences such as in our case, grade 6s, you will need to communicate with them using language they will understand or else they will get bored. Plus, I learned that in order to keep the audience focused on your presentation you should keep it short and simple if not they will lose interest. Also, I learned the things I need to include in my presentation to make it succesful such as stating how we made it, which programms we used, tips for them etc. Lastly, the presentation let me have this time to reflect on the project itself and the steps we did to get there and what we learned which was useful.
